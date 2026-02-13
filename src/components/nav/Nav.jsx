@@ -9,7 +9,7 @@ function Nav() {
     <div className="nav">
         <div className="top-nav">
             <div className="logo">
-                <span>V-Shop</span>
+                <span>S-Mart</span>
                 <FaShopify />
             </div>
 
