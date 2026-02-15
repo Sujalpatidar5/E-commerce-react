@@ -65,5 +65,6 @@
 .home h1 {
     text-align: center;
     padding: 50px;
-    color : rgb(28,34,39)
+    color : rgb(28,34,39);
+    font-size : 3vmax;
 }
