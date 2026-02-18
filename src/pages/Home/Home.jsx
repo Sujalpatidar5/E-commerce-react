@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Nav from '../../components/nav/Nav'
 import bg from "../../assets/bg0.gif"
 import "./Home.css"
-import { category } from '../../Category'
+import { category } from '../../category'
 import Product from '../../components/Product/Product'
 import { dummydata } from '../../dummydata'
 
@@ -35,7 +35,7 @@ function Home() {
       <h1>Trending Products</h1>
       <div className="product-section">
         {cate.slice(0,7).map((item) => (
-          <Product name={item.name} price={item.price} image={item.image} />
+          <Product name={item.name} price={item.price} image={item.image} id={item.id} />
         ))}
       </div>
     </div>

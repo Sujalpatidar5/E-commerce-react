@@ -3,15 +3,20 @@ import { FaShopify } from "react-icons/fa6";
 import { IoSearchOutline } from "react-icons/io5";
 import { LuShoppingCart } from "react-icons/lu";
 import "./Nav.css"
+import { Link } from 'react-router-dom';
+import {useDispatch, useSelector} from "react-redux"
 
 function Nav() {
+    let dispatch = useDispatch()
+    let items = useSelector(state => state)
+    
   return (
     <div className="nav">
         <div className="top-nav">
-            <div className="logo">
+            <Link to="/"><div className="logo">
                 <span>S-Mart</span>
                 <FaShopify />
-            </div>
+            </div></Link>
 
             <form className="search-box">
                 <input type="text" placeholder='Search Items..'/>
@@ -20,14 +25,14 @@ function Nav() {
 
             <div className="cart-box">
                 <LuShoppingCart />
-                <span>0</span>
+                <span>{items.cart.length}</span>
             </div>
         </div>
         <div className="bottom-nav">
-            <li>Home</li>
-            <li>Shop</li>
-            <li>Cart</li>
-            <li>Contact</li>
+            <Link to="/"><li>Home</li></Link>
+            <Link to="/shop"><li>Shop</li></Link>
+            <Link to="/cart"><li>Cart</li></Link>
+            <Link to="/contact"><li>Contact</li></Link>
         </div>
     </div>
   )
