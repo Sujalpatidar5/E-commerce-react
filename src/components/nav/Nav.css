@@ -46,6 +46,10 @@
     font-size: 18px;
 }
 
+.top-nav .search-box input:focus {
+    outline: none;
+}
+
 .top-nav .search-box button {
     width: 30%;
     height: 100%;

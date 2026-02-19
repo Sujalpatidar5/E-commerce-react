@@ -23,10 +23,10 @@ function Nav() {
                 <button><IoSearchOutline /></button>
             </form>
 
-            <div className="cart-box">
+            <Link to="/cart"><div className="cart-box">
                 <LuShoppingCart />
                 <span>{items.cart.length}</span>
-            </div>
+            </div></Link>
         </div>
         <div className="bottom-nav">
             <Link to="/"><li>Home</li></Link>

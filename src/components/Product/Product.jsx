@@ -16,6 +16,7 @@ function Product({name, image, price,id}) {
             <span className='price'>Rs {price}</span>
             <button onClick={() => {
               dispatch(AddItem({name:name, image:image, price:price, id:id}))
+              alert("Product Added successfully..")
             }}>Add +</button>
         </div>
     </div>
